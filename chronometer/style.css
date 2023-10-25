@@ -1,0 +1,206 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 50px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+}
+
+.chrono {
+    /* border: 1px solid black; */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px #a5a4a4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    outline: 2px solid #ccc;
+}
+
+/* dot in middle */
+.chrono::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid red;
+    z-index: 20;
+}
+
+/* deal with chronometer-hands */
+.chrono .hands {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.chrono .min-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    height: 25%;
+    width: 5px;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+}
+
+.chrono .sec-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3px;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+}
+
+.chrono .ms-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 30px;
+    transform: translate(calc(-50% - 10px) , -50%);
+    border: 1px solid #F44336;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 0px 2px;
+    background-color: #f1f1f138;
+}
+
+.chrono .number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    /* text-align: justify; */
+    padding-top: 5px;
+}
+
+.chrono .number::before {
+    content: '';
+    position: absolute;
+    top: 126px;
+    left: 1px;
+    background-color: black;
+    height: 5px;
+    width: 2px;
+    /* text-align: center; */
+    transform: rotate(90deg);
+}
+
+.chrono .number1 {
+    --webkit-transform: rotate(30deg);
+    transform: rotate(0deg);
+}
+
+.chrono .number1 {
+    --webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.chrono .number2 {
+    --webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.chrono .number3 {
+    --webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.chrono .number4 {
+    transform: rotate(120deg);
+}
+
+.chrono .number5 {
+    transform: rotate(150deg);
+}
+
+.chrono .number6 {
+    transform: rotate(180deg);
+}
+
+.chrono .number7 {
+    transform: rotate(210deg);
+}
+
+.chrono .number8 {
+    transform: rotate(240deg);
+}
+
+.chrono .number9 {
+    transform: rotate(270deg);
+}
+
+.chrono .number10 {
+    transform: rotate(300deg);
+}
+
+.chrono .number11 {
+    transform: rotate(330deg);
+}
+
+.chrono .number12 {
+    transform: rotate(360deg);
+}
+
+
+button.ctrBtn {
+    all: unset;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #F44336;
+    box-shadow: 0px 0px 20px #f44336c4;
+    color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    margin-top: 100px;
+}
+
+button.ctrBtn:hover {
+    background-color: #af2218;
+}
+
+button.refreshBtn {
+    all: unset;
+    padding: 15px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #3F51B5;
+    box-shadow: 0px 0px 20px #3f51b59d;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 100px;
+    transition: all 0.3s linear;
+}
+
+button.refreshBtn:hover {
+    background-color: #283db8;
+}
